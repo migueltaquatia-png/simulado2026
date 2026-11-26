@@ -1,37 +1,163 @@
-.app{
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.pagina {
+  min-height: 100vh;
+  background: #f3f4f6;
+  color: #333333;
+  padding: 24px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
-.primeira{
-  width: 100%;
+/* Cabeçalho */
+.cabecalho {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cabecalho img {
+  width: 80px;
+  height: 80px;
+}
+
+.cabecalho h1 {
+  color: #333333;
+  font-size: 2.2rem;
+}
+
+/* Cartões base */
+.box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-
+  flex-direction: column;
+  gap: 16px;
 }
-button{
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
+
+/* Busca e Chips */
+.form-busca {
+  display: flex;
+  gap: 10px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-busca input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-busca button {
+  padding: 10px 20px;
   border: none;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
+  border-radius: 6px;
+  background-color: #483DAD;
+  color: #FFFFFF;
+  font-weight: bold;
   cursor: pointer;
 }
-button:hover{
-  background-color: #3e8e41;
+
+.chips {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
-input{
-  width: 200px;
-  height: 20px;
-  border-radius: 5px;
-  border: 1px solid #646464;
-  padding: 5px;
+
+.chips button {
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.chips button:hover {
+  border-color: #483DAD;
+  color: #483DAD;
+}
+
+.aviso {
+  text-align: center;
+  color: #b91c1c;
+  font-weight: 500;
+}
+
+/* Clima Atual */
+.topo-atual {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 14px;
+}
+
+.temp-atual {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.temp-atual strong {
+  font-size: 2.4rem;
+}
+
+.grade-detalhes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.grade-detalhes div {
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+/* Previsão 10 dias */
+.grade-dias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.card-dia {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.dia-nome {
+  text-transform: capitalize;
+}
+
+.card-dia .icone {
+  font-size: 1.6rem;
 }
